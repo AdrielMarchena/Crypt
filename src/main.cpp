@@ -67,7 +67,6 @@ static void ASCIICrypt(const std::string& pass,const std::string& key, std::stri
     }
 }
 
-
 static void Decrypt(const std::string& key,const std::string& passCrypted, std::string& decryptedText) {
 
     std::string intermediate;
@@ -90,7 +89,7 @@ static void Decrypt(const std::string& key,const std::string& passCrypted, std::
 
 static bool WriteOnFile(const std::string& cryptedPass,const std::string& filepath,const std::string& passType) {
 
-    std::fstream stream (filepath,std::ios::app);
+    std::ofstream stream (filepath,std::ios::app);
     stream.clear();
     std::string typePass = "#" + passType;
     if (stream.is_open()) {

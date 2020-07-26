@@ -19,5 +19,10 @@ Release
 *.suo
 *.csproj.user
 *.vbproj.user
-ipch
-*sdf
+ipch/
+*.aps
+*.ncb
+*.opendb
+*.opensdf
+*.sdf
+*.cachefile
