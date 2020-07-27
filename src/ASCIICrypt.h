@@ -3,10 +3,10 @@ class ASCIICrypt
 {
 public:
 	ASCIICrypt();
-	std::string encrypt(const std::string& pass, const std::string& key);
-	std::string decrypt(const std::string& key, const std::string& passCrypted);
-	void clear();
+	static std::string encrypt(const std::string& pass, const std::string& key);
+	static std::string decrypt(const std::string& key, const std::string& passCrypted);
+	static void clear();
 private:
-	unsigned long hex2dec(std::string hex);
+	static unsigned long hex2dec(std::string hex);
 };
 

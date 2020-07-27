@@ -1,10 +1,10 @@
-#include "HandleFile.h"
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <sstream>
+#include "HandleFile.h"
 
 HandleFile::HandleFile(const std::string& filepath) : filepath(filepath){}
-HandleFile::HandleFile() {}
 
 bool HandleFile::write(const std::string& line) {
 
@@ -22,12 +22,12 @@ bool HandleFile::write(const std::string& line) {
     }
 }
 
-std::string HandleFile::read() {
+std::stringstream HandleFile::read() {
     std::ifstream stream(filepath);
     std::string line;
-    std::string stringReturn;
+    std::stringstream stringReturn;
     while (getline(stream, line)) {
-        stringReturn += line + '\n';
+        stringReturn << line + '\n';
     }
     return stringReturn;
 }
